@@ -40,15 +40,12 @@ async function realizarPeticion(metodo) {
         const endTime = performance.now();
         const duracion = (endTime - startTime).toFixed(2);
 
-        const corsInfo = response.type === 'cors' ? 'Permitido (Mode: cors)' : response.type;
-
         //registro en consola
         console.group(`petición ${metodo}`);
         console.log(`URL solicitada: ${url}`);
         console.log(`metodo usado: ${metodo}`);
         console.log(`tiempo de respuesta: ${duracion} ms`);
         console.log(`codigo de estado: ${response.status}`);
-        console.log(response);
         console.groupEnd();
 
         let data;

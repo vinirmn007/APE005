@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD APE005</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Gestor de Peticiones RESTful (Mock)</h1>
+
+    <div class="control-panel">
+        <h3>Datos de Entrada</h3>
+        <input type="number" id="inputId" placeholder="ID (Solo para Update/Delete)" />
+        <input type="text" id="inputTitle" placeholder="Título del post" />
+        <textarea id="inputBody" rows="3" placeholder="Contenido del post"></textarea>
+        
+        <div class="btn-group">
+            <button class="btn-get" onclick="realizarPeticion('GET')">GET (Listar)</button>
+            <button class="btn-post" onclick="realizarPeticion('POST')">POST (Crear)</button>
+            <button class="btn-put" onclick="realizarPeticion('PUT')">PUT (Actualizar)</button>
+            <button class="btn-delete" onclick="realizarPeticion('DELETE')">DELETE (Borrar)</button>
+        </div>
+    </div>
+
+    <h3>Respuesta del Servidor:</h3>
+    <div id="resultados"></div>
+
+    <script src="logic.js"></script>
+</body>
+</html>

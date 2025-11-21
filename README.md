@@ -30,8 +30,8 @@ Este proyecto utiliza `https://jsonplaceholder.typicode.com` como backend.
 
 | Método | URL Solicitada | Código | Tiempo | Observaciones CORS |
 | :--- | :--- | :--- | :--- | :--- |
-| **GET** | `.../posts/1` | <span style="color:green">200</span> | 45 ms | Permitido (Mode: cors) |
-| **POST** | `.../posts` | <span style="color:green">201</span> | 112 ms | Permitido (Mode: cors) |
-| **PUT** | `.../posts/1` | <span style="color:green">200</span> | 98 ms | Permitido (Mode: cors) |
-| **DELETE** | `.../posts/1` | <span style="color:green">200</span> | 60 ms | Permitido (Mode: cors) |
-| **GET** | `.../posts/9999` | <span style="color:red">404</span> | 55 ms | Permitido (Mode: cors) |
+| **GET** | `https://jsonplaceholder.typicode.com/posts?_limit=5` | <span style="color:green">200</span> | 45 ms | access-control-allow-credentials: true |
+| **POST** | `https://jsonplaceholder.typicode.com/posts` | <span style="color:green">201</span> | 112 ms | access-control-allow-credentials: true |
+| **PUT** | `https://jsonplaceholder.typicode.com/posts/1` | <span style="color:green">200</span> | 98 ms | access-control-allow-credentials: true |
+| **DELETE** | `https://jsonplaceholder.typicode.com/posts/1` | <span style="color:green">200</span> | 60 ms | access-control-allow-credentials: true |
+| **GET** | `https://jsonplaceholder.typicode.com/posts/999999999` | <span style="color:red">404</span> | 55 ms | access-control-allow-credentials: true |
